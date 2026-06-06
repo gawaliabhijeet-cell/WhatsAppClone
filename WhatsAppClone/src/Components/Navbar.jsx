@@ -1,19 +1,20 @@
 import React from "react";
-import Pic from "../Pic/WhatApp Logo.png";
+import LogoPic from "../Pic/WhatApp Logo.png";
+import circle from "../Pic/circle.png";
 
 export default function Navbar() {
     return (
 
-        <nav className="bg-[#fcf5eb] flex items-center justify-between px-8 py-4">
+        <nav className="bg-[#fcf5eb] flex items-center justify-between px-8 py-4 gap-4">
             {/* Logo */}
             <div className=" md:flex justify-center items-center">
                 <img
-                    src={Pic}
+                    src={LogoPic}
                     alt="WhatsApp"
                     className="h-10"
-                    />
-                    </div>
-            
+                />
+            </div>
+
 
             {/* Menu */}
             <ul className="hidden md:flex items-center gap-8 text-gray-950">
@@ -32,14 +33,37 @@ export default function Navbar() {
             </ul>
 
             {/* Download Button */}
-            <button className="hidden md:flex bg-[#25D366] px-6 py-3 rounded-full font-medium items-center gap-2 hover:bg-black hover:text-white duration-300">
+            <div className="flex items-center justify-center gap-4">
+
+            <button
+                className="cursor-pointer hidden md:flex bg-[#25D366] px-6 py-3 rounded-full font-medium items-center hover:bg-black hover:text-white duration-300"
+                onClick={() => {
+                    console.log("Button clicked");
+                }}
+             >
+                Sign in 
+            </button>
+            <button className=" cursor-pointer hidden md:flex bg-[#25D366] px-6 py-3 rounded-full font-medium items-center hover:bg-black hover:text-white duration-300">
                 Download<span>↓</span>
             </button>
+            
+                </div>
 
+        
             {/* Mobile Menu Icon */}
+            <div
+            className="flex items-center justify-center px-4 gap-4"
+            >
+
+            <img
+                className=" block md:hidden h-8 w-8 "
+                src={circle}
+                alt="Download"
+                />
             <button className="md:hidden text-2xl">
                 ☰
             </button>
+                </div>
         </nav>
     );
 }
