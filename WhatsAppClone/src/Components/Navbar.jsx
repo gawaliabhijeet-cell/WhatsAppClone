@@ -1,6 +1,8 @@
 import React from "react";
 import LogoPic from "../Pic/WhatApp Logo.png";
 import circle from "../Pic/circle.png";
+import { FaArrowRight } from "react-icons/fa";
+
 
 export default function Navbar() {
     return (
@@ -18,7 +20,7 @@ export default function Navbar() {
 
             {/* Menu */}
             <ul className="hidden md:flex items-center gap-8 text-gray-950">
-                <li className="cursor-pointer hover:underline-offset-4 decoration-green-500"
+                <li className="cursor-pointer hover:underline-offset-4 hover:decoration-green-500"
                 >Features</li>
                 <li className="cursor-pointer hover:underline-offset-4 decoration-green-500"
                 >Privacy</li>
@@ -35,35 +37,33 @@ export default function Navbar() {
             {/* Download Button */}
             <div className="flex items-center justify-center gap-4">
 
-            <button
-                className="cursor-pointer hidden md:flex bg-[#25D366] px-6 py-3 rounded-full font-medium items-center hover:bg-black hover:text-white duration-300"
-                onClick={() => {
-                    console.log("Button clicked");
-                }}
-             >
-                Sign in 
-            </button>
-            <button className=" cursor-pointer hidden md:flex bg-[#25D366] px-6 py-3 rounded-full font-medium items-center hover:bg-black hover:text-white duration-300">
-                Download<span>↓</span>
-            </button>
-            
-                </div>
+                <button
+                    className="hidden md:flex items-center gap-2 cursor-pointer bg-white border border-black px-6 py-3 rounded-full font-medium hover:bg-black hover:text-white transition duration-300"
+                >
+                    Sign in
+                    <FaArrowRight />
+                </button>
+                <button className=" cursor-pointer hidden md:flex bg-[#25D366] px-6 py-3 rounded-full font-medium items-center hover:bg-black hover:text-white duration-300">
+                    Download
+                </button>
 
-        
+            </div>
+
+
             {/* Mobile Menu Icon */}
             <div
-            className="flex items-center justify-center px-4 gap-4"
+                className="flex items-center justify-center px-4 gap-4"
             >
 
-            <img
-                className=" block md:hidden h-8 w-8 "
-                src={circle}
-                alt="Download"
+                <img
+                    className=" block md:hidden h-8 w-8 "
+                    src={circle}
+                    alt="Download"
                 />
-            <button className="md:hidden text-2xl">
-                ☰
-            </button>
-                </div>
+                <button className="md:hidden text-2xl">
+                    ☰
+                </button>
+            </div>
         </nav>
     );
 }
