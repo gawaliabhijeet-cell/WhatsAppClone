@@ -2,6 +2,7 @@
 import './App.css'
 import Navbar from './Components/Navbar'
 import Main from './Components/Main'
+// import Main1 from './Components/Main1'
 
 function App() {
   
@@ -11,6 +12,7 @@ function App() {
   <>
   <Navbar />
   <Main />
+  {/* <Main1/> */}
   </>
   )
 }
